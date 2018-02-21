@@ -2,27 +2,31 @@ import React, { Component } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Item from "../components/Item";
+import InputField from "../components/InputField"
+import Button from "../components/Button";
+import Card from "material-ui/Card";
+
 
  export default class Main extends Component{
      render(){
         var divStyle = {
-            margin: '0',
+            padding: '20px',
             position: 'absolute',
-            top: '20%',
+            top: '50%',
             left: '50%',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)'
         }
-         return(
-            <div style={divStyle}>
-                <Header />
-                <ul>
-                    <Item />
-                    <Item />
-                    <Item />
-                </ul>
-                <Footer />
-            </div>
-         );
+        var textStyle = {
+            textAlign:'center'
+        }
+        return(
+        <Card style={divStyle}>
+            <h3 style={textStyle}>Welcome Earthling</h3>
+            <InputField />
+            <InputField />
+            <Button />
+        </Card>
+        );
      };
  }
