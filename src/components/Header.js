@@ -5,8 +5,9 @@ export default class Header extends Component{
     render(){
         return(
             <AppBar
-            title="Header"
-            iconClassNameRight="muidocs-icon-navigation-expand-more" />
+            title={this.props.header}
+            iconClassNameRight="muidocs-icon-navigation-expand-more" 
+            onLeftIconButtonClick={this.props.handleToogle}/>
         );
     };
 }

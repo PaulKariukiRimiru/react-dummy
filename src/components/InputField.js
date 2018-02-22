@@ -9,7 +9,7 @@ export default class InputField extends Component{
         return(
             <div>
                 <TextField style={divStyle}
-                    floatingLabelText="You text goes here"
+                    floatingLabelText={this.props.description}
                 />
             </div>
         );

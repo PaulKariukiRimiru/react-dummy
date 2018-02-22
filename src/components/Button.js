@@ -13,7 +13,7 @@ export default class Button extends Component{
             <Col xs={12}>
                 <Row center="xs">
                 <Col xs={6} >
-                    <RaisedButton  primary={true} style={divStyle} label="Hey Click me"/>
+                    <RaisedButton  primary={true} style={divStyle} label={this.props.label}/>
                 </Col>
                 </Row>
             </Col>
