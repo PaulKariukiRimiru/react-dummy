@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import registerServiceWorker from './registerServiceWorker';
-import { Router, Route, Link, BrowserRouter} from 'react-router-dom'
+import {  Route,  BrowserRouter} from 'react-router-dom'
 import App from './App';
 import Dashboard from './pages/DashBoard';
 import Todo from './pages/Todo';

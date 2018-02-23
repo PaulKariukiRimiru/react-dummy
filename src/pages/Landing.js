@@ -38,7 +38,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
         return(
             <MuiThemeProvider>
-            <Row>
+            <Row container>
                 <Col xs={12} >
                 <Row center="xs" >
                     <Col xs={6} style={divStyle}>

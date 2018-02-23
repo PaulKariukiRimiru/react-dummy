@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import Landing from "./pages/Landing";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MainDrawer from './components/Drawer';
-import face from 'material-ui/svg-icons/action/face';
 
 class App extends Component {
 
