@@ -7,6 +7,10 @@ export function addTodo (todos) {
     return ({type:ADD_TODO, payload:todos});
 }
 
-export const removeTodo = todos => ({type:REMOVE_TODO, payload: todos});
+export function removeTodo (todos) {
+    return ({type:REMOVE_TODO, payload: todos});
+}
 
-export const finishTodo = todos => ({type:FINISH_TODO, payload: todos});
+export function finishTodo (todos) {
+    return ({type:FINISH_TODO, payload: todos});
+}

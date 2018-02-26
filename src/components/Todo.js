@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TodoList from '../components/TodoList';
 import { addTodoToList, fetchTodosThunk } from '../reducers/thunks';
-import { addTodo, fetchTodos} from '../actions/index';
+import { addTodo, fetchTodos, removeTodo} from '../actions/index';
 
 const mapStateToProps = (state) =>{
     return {
@@ -19,6 +19,11 @@ class Todo extends Component{
     constructor(){
         super();
         this.handleClick = this.handleClick.bind(this)
+    }
+
+    removeItem(index){
+        console.log("received", index)
+        this.props.dispatch(removeTodo(index))
     }
 
     handleClick(){
@@ -48,7 +53,7 @@ class Todo extends Component{
                         </Col>
 
                         <Col xs={12}>
-                            <TodoList  todoList={ todoList.todos }/>
+                            <TodoList  todoList={ todoList.todos } removeTodo = {this.removeItem.bind(this)}/>
                         </Col>
                         </Row>
                     </Row>

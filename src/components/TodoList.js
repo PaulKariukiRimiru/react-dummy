@@ -7,7 +7,32 @@ import Divider from 'material-ui/Divider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class TodoList extends Component{
-    
+    removeItem = this.props.removeTodo
+
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this)
+    };
+
+    handleClick(index, event){
+        console.log("clicking", this.props)
+        this.props.removeTodo(index)
+    }
+
+    eachItem = (todo, i) =>{
+
+        console.log("clicking",this.props)
+        return(
+            <div>
+                <ListItem
+                    primaryText={<p>{todo}</p>}
+                    onClick={this.handleClick.bind(this, i)}
+                    key={i}
+                    index={i}/>
+                <Divider inset={true} />
+            </div>
+        );
+    }
     render(){
         console.log("in todolist", this.props)
         var divStyle = {
@@ -18,17 +43,7 @@ export default class TodoList extends Component{
                 <Card style={divStyle}>
                     <List>
                         <SubHeader>MyTodo List</SubHeader>
-                        {this.props.todoList.map(function(todo, i) {
-                            return(
-                            <div>
-                                <ListItem
-                                    primaryText={
-                                        <p>{todo}</p>
-                                    }/>
-                                <Divider inset={true} />
-                            </div>
-                            );
-                        })}  
+                        {this.props.todoList.map(this.eachItem, this)}  
                     </List>
                 </Card>
             </MuiThemeProvider>
