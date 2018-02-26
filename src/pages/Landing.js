@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Card from "material-ui/Card";
 import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
-import Login from './Login';
-import Register from './Register';
+import Login from '../components/Login';
+import Register from '../components/Register';
 import FontIcon from 'material-ui/FontIcon';
 import {Col , Row } from 'react-flexbox-grid'; 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -16,7 +16,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
         this.state = {
             itemIndex:0
         };
-    }
+      }
     
       handleChange(value) {
         this.setState({

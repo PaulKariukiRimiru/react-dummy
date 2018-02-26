@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import InputField from "../components/InputField"
-import Button from "../components/Button";
 import {Col, Row} from 'react-flexbox-grid';
+import RaisedButton from 'material-ui/RaisedButton'
+import TextField from 'material-ui/TextField';
 
 export default class Login extends Component{
     render(){
@@ -12,6 +12,9 @@ export default class Login extends Component{
             marginLeft:0,
             marginRight:0
         } 
+        var divStyle = {
+            margin: 12,
+        }
 
         return(
             <Row center="xs" style={rowStyle}>
@@ -20,13 +23,23 @@ export default class Login extends Component{
                     <Col xs ><h3 style={textStyle}>Welcome</h3></Col>
                     </Row>
                     <Row center="xs">
-                    <Col xs><InputField description="email"/></Col>
+                    <Col xs >
+                        <TextField style={divStyle}
+                            floatingLabelText="Email"
+                            refs="emailField"/>
+                    </Col>
                     </Row>
                     <Row center="xs">
-                    <Col xs ><InputField description="password"/></Col>
+                    <Col xs >
+                        <TextField style={divStyle}
+                            floatingLabelText="Password"
+                            refs="passwordField"/>
+                    </Col>
                     </Row>
                     <Row center="xs">
-                    <Col xs ><Button label="login"/></Col>
+                    <Col xs={6} >
+                        <RaisedButton  onClick={this.clickHandler} primary={true} style={divStyle} label="Login"/>
+                    </Col>
                     </Row>
                 </Col>
             </Row>
