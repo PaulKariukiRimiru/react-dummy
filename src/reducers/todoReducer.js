@@ -15,9 +15,9 @@ const todoReducer = function (state = initialState, action) {
                                     ...state.todos.slice(action.payload + 1)]}
             break;
         case FINISH_TODO:
-            return {...state, todos:[...state.todos.slice(0, action.payload.index), 
-                                    ...state.todos[action.payload.index]+1,
-                                    ...state.todos.slice(action.payload.index +1)]}
+            return {...state, todos:[...state.todos.slice(0, action.index), 
+                                    ...state.todos[action.index]+1,
+                                    ...state.todos.slice(action.index +1)]}
             
             break;
         default:
