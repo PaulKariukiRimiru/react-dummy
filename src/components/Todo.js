@@ -6,7 +6,6 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TodoList from '../components/TodoList';
-import { addTodoToList, fetchTodosThunk } from '../reducers/thunks';
 import { addTodo, fetchTodos, removeTodo} from '../actions/index';
 
 const mapStateToProps = (state) =>{

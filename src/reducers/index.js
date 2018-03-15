@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import  todoReducer from './todoReducer';
-import fetchReducer from './fetchReducers';
+import modulesReducer from './modulesReducer';
+
 
 const rootReducer = combineReducers({
-    fetchReducer,
-    todos :todoReducer
+    todos :todoReducer, 
+    modules :modulesReducer
 })
 
 export default rootReducer;

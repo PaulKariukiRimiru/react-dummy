@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import Grid from '../components/Grid'
 
-export default class DashBoard extends Component{
+const mapStateToProps = (state) => ({
+    modules : state.modules
+})
+export class DashBoard extends Component{
     render(){
         return(
-            <h4>DashBoard</h4>
+            <Grid modules={this.props.modules}/>
         );
     }
 }
+
+export default connect(mapStateToProps)(DashBoard)

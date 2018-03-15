@@ -4,9 +4,10 @@ const initialState = {
     todos:["one", "two"]
 }; 
 const todoReducer = function (state = initialState, action) {
-    console.log("action", action)
-    console.log("current state", {...state})
     switch (action.type) {
+        case FETCH_TODO:
+            return {...state.todos}
+            break;
         case ADD_TODO:
             return {...state, todos:[...state.todos, action.payload]} 
             break;
